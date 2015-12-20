@@ -27,7 +27,7 @@ function recursive_enumerate(prefix, trieNode, limit, results) {
 }
 
 function refresh_wordlist() {
-    var query = $("#searchbox").val();
+    var query = $("#searchbox").val().toLowerCase();
     if (query!=oldQuery && query!="") {
         oldQuery = query;
         var trie = dictionaries[dir].index;
